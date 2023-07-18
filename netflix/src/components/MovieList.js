@@ -1,6 +1,6 @@
 import React from 'react'
 import Movie from './Movie'
-function MovieList({props}) {
+function MovieList({props,commentHandler}) {
 
 
   return (
@@ -9,7 +9,7 @@ function MovieList({props}) {
 
 props.map((obj,i)=>(
 
-<Movie props = {obj} key={i} />
+<Movie props = {obj} key={i} commentHandler={commentHandler}/>
 
 )
 
