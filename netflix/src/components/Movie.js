@@ -2,7 +2,7 @@ import React from 'react'
 import { Button, Card } from "react-bootstrap";
 import { useState } from 'react';
 import ModalMovie from './ModalMovie';
-function Movie({props}) {
+function Movie({props,commentHandler}) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -21,7 +21,11 @@ function Movie({props}) {
       <Card.Body>
         <Card.Title>{props.title}</Card.Title>
         <Button variant="primary" onClick={handleShow} >add to favorite</Button>
-        <ModalMovie props={props} handleClose={handleClose} handleShow={handleShow} show={show} />
+        <ModalMovie props={props}
+         handleClose={handleClose}
+          handleShow={handleShow} 
+        show={show}
+         commentHandler={commentHandler} />
         
       </Card.Body>
     </Card>
