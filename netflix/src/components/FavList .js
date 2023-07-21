@@ -62,7 +62,7 @@ handlefavMov();
 
 
 
-  console.log('favvvvv',favMov);
+  // console.log('favvvvv',favMov);
 
   return (
     <div>{favMov.map((mov,id)=>(
